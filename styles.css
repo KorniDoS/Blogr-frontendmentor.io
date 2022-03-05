@@ -128,8 +128,7 @@ body{
 }
 .navigation > a:link{
     padding: 0.4rem;
-    background-color: white;
-    color: white !important;
+    color: hsl(13, 100%, 72%) !important;
     margin: 0.4rem;
     text-decoration: none;
 }
