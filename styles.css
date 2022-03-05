@@ -43,7 +43,6 @@ body{
     text-rendering: optimizeLegibility;
     margin: 0;
     line-height: 1.5;
-    overflow-y: visible;
     overflow-x: hidden;
     color: hsl(207, 13%, 34%);
 }
@@ -59,7 +58,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 34rem;
+    height: 35rem;
     background-image: url("./images/bg-pattern-intro-mobile.svg");
     background-attachment: scroll;
     background-position-y: -16.125rem;
@@ -321,9 +320,9 @@ hr{
     content: ' ';
     width: 63%;
     height: 17%;
-    background-color: #DCDCDC;
+  /*  background-color: #DCDCDC;
     filter: opacity(0.5);
-    background-attachment: fixed;
+    background-attachment: fixed;*/
 }
 footer{
     width: 100%;
