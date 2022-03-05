@@ -45,6 +45,7 @@ body{
     line-height: 1.5;
     overflow-x: hidden;
     color: hsl(207, 13%, 34%);
+ background: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 }
 .logo{
     display: inline-block;
