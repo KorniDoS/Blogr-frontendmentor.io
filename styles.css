@@ -1,0 +1,697 @@
+/*# Front-end Style Guide ## 
+Layout The designs were created to the following widths: - Mobile: 375px - Desktop: 1440px 
+## 
+
+
+Colors ### 
+Primary - Light red (CTA text): hsl(356, 100%, 66%)
+ - Very light red (CTA hover background): hsl(355, 100%, 74%)
+  - Very dark blue (headings): hsl(208, 49%, 24%) 
+
+
+  ### Neutral - White (text): hsl(0, 0%, 100%) 
+  - Grayish blue (footer text): hsl(240, 2%, 79%) 
+  - Very dark grayish blue (body copy): hsl(207, 13%, 34%) 
+  - Very dark black blue (footer background): hsl(240, 10%, 16%) 
+
+  ### Gradient Background gradient - Intro/CTA mobile nav: 
+  - Very light red: hsl(13, 100%, 72%) 
+  - Light red: hsl(353, 100%, 62%) 
+  Background gradient - body: - Very dark gray blue: hsl(237, 17%, 21%) - 
+  Very dark desaturated blue: hsl(237, 23%, 32%) 
+
+
+  ## Typography ### Body Copy - Font size: 16px
+   ### Fonts - Family: [Overpass](https://fonts.google.com/specimen/Overpass?preview.text_type=custom) 
+   - Weights: 300, 600 
+   - Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom) 
+   - Weights: 400, 500, 700 */
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    height: 100%;
+}
+body{
+    font-family: 'Overpass';
+    display: block;
+    width: 100vw;
+    height: 100%;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    line-height: 1.5;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: hsl(207, 13%, 34%);
+}
+.logo{
+    display: inline-block;
+}
+.header{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Ubuntu';
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 34rem;
+    background-image: url("./images/bg-pattern-intro-mobile.svg");
+    background-attachment: scroll;
+    background-position-y: -16.125rem;
+    background-position-x: 36%;
+    background-repeat: no-repeat;
+    border-radius: 0 0 0 76px;
+}
+.header::before{
+    position: absolute;
+    content: " ";
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-blend-mode: multiply;
+    border-radius: 0 0 0 76px;
+}
+.logo{
+    display: inline-block;
+    position: absolute;
+    top: 5%;
+    left: 6%;
+}
+
+
+
+.menu{
+    display: inline-block;
+    position:absolute;
+    top: 12%;
+    right: 6% 
+}
+.hero{
+    text-align: center;
+    width: 80%;
+}
+.hero h1{
+    font-weight: 400;
+}
+.hero p{
+    font-weight: lighter;
+}
+.hero + p{
+    margin-bottom: 1.75rem;
+}
+#links{
+    display: none;
+    z-index: 2;
+}
+.navigation{
+    position: absolute;
+    border-radius: 0.3rem;
+    top: 23%;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    width: 85%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-flow:column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0.313rem 0.938rem;
+}
+.navigation > a:link{
+    padding: 0.4rem;
+    background-color: white;
+    color: white !important;
+    margin: 0.4rem;
+    text-decoration: none;
+}
+.navigation > a:visited{
+    color: hsl(13, 100%, 72%);
+}
+.navigation > a:hover, .navigation > a:focus{
+    color:hsl(353, 100%, 62%) 
+}
+.navigation > a:active{
+    color: #DCDCDC;
+}
+#connect_menu{
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background-color: #DCDCDC;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
+#connect_menu > a{
+    color: black;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+.login{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+#login-btn:link{
+    color: black;
+    text-decoration: none;
+    padding: 0.4rem;
+    margin-top: 1rem;
+}
+#login-btn:visited{
+    color: black;
+}
+#login-btn:hover,:focus{
+    text-decoration: underline;
+}
+#login-btn:active{
+    color: #DCDCDC;
+}
+#sign-up-btn:link{
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    margin-top: 0.3rem;
+    padding: 0.6rem 2rem;
+    text-decoration: none;
+    border-radius: 2rem;
+    color: hsl(0, 0%, 100%);
+}
+#sign-up-btn:visited{
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    color: white;
+}
+#sign-up-btn:hover,:focus{
+    background: unset;
+    background-color: hsl(355, 100%, 74%);
+}
+hr{
+    width: 90%;
+}
+.callToAction{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.callToAction a:link{
+    color: hsl(356, 100%, 66%);
+    width: fit-content;
+    background-color: white;
+    padding: 0.75rem 1.125rem;
+    border-radius: 25px;
+    text-decoration: none;
+}
+#first:visited{
+    color: hsl(356, 100%, 66%);
+}
+#first:hover,:focus{
+    background-color: hsl(355, 100%, 74%);
+    color: white;
+}
+#last{
+    background-color: transparent;
+    color:hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 25px;
+}
+#last:hover,:focus{
+    background-color: white;
+    color: hsl(355, 100%, 74%);
+}
+.main-section{
+    padding-top: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin-bottom: 5.5rem;
+}
+.illustration-mobile{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    grid-template-columns: 1.5fr 1.5fr;
+    place-content: center;
+    place-items: center;
+}
+.mobile_editor-boxshadow::before{
+    position: absolute;
+    top:12%;
+    left: 0;
+    z-index: -1;
+    content: ' ';
+    width: 100%;
+    height: 29%;
+    /*background-color: #DCDCDC;
+    filter: opacity(0.5);
+    background-attachment: fixed;*/
+}
+.editor{
+    text-align: center;
+    padding: 0 2.2rem 0 2.2rem;
+}
+.stateOfArt{
+    padding: 11rem 2.5rem 5rem 2.5rem;
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: auto;
+    background: url('./images/bg-pattern-circles.svg');
+    background-size: 150%;
+    background-position: 50% 38%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-radius: 0px 86px 0px 86px;
+}
+.stateOfArt::before{
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    z-index: -2;
+    border-radius: 0px 86px 0px 86px;
+}
+.stateOfArt::after{
+    position: absolute;
+    content: ' ';
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 17rem;
+    z-index: 999999;
+    background: url("./images/illustration-phones.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.stateOfArt h1{
+    font-size: 2rem;
+}
+.free{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    padding: 2.5rem 2.5rem 5rem 2.5rem 
+}
+#laptop{
+    max-width: 100%;
+}
+.laptop-illustration::after{
+    position: absolute;
+    top: 10%;
+    left: 18%;
+    z-index: -1;
+    content: ' ';
+    width: 63%;
+    height: 17%;
+    background-color: #DCDCDC;
+    filter: opacity(0.5);
+    background-attachment: fixed;
+}
+footer{
+    width: 100%;
+    height: auto;
+    color: hsl(240, 2%, 79%);
+    background-color: hsl(240, 10%, 16%);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 0 86px 0 0;
+}
+.footer_navigation a:link{
+    display: flex;
+    flex-flow: column nowrap;
+    text-decoration: none;
+    color: hsl(240, 2%, 79%);
+
+}
+.footer_navigation a:visited{
+    color:hsl(240, 2%, 79%);
+}
+.footer_navigation a:hover,:focus{
+    text-decoration: underline;
+    color: #DCDCDC;
+}
+footer h1 {
+    color: white;
+}
+.footer_navigation strong{
+    display: block;
+    margin: 1rem 0;
+    color: white;
+}
+.footer_navigation div{
+    margin-bottom: 2rem;
+}
+@media only screen and (max-width: 374px){
+    .mobile_editor-boxshadow::before{
+        height: 16rem;
+   }
+}
+@media only screen and (min-width: 375px){
+    .mobile_editor-boxshadow::before, .laptop-illustration::after{
+        all: unset;
+   }
+    .callToAction{
+        justify-content: center;
+        gap: 0.5rem;
+   }
+}
+@media only screen and (min-width: 1000px){
+    .header{
+        background-size: 178%;
+        background-position-y: 51%;
+        background-position-x: 19%;
+        background-repeat: no-repeat;
+   }
+    .header::before{
+        background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+   }
+    .menu, hr{
+        display: none;
+   }
+    .hero h1{
+        font-size: 3rem;
+        margin-bottom: 0;
+   }
+    .hero > p{
+        margin-bottom: 2.688rem;
+   }
+    #links{
+        display: grid;
+        grid-template-columns: 1.3fr 1.35fr 1.3fr 25vw 3.5fr;
+        grid-template-rows: 1fr;
+   }
+    .navigation{
+        all: unset;
+        position: absolute;
+        border-radius: 0.3rem;
+        top: 10%;
+        left: 16%;
+        height: auto;
+   }
+    #links > a:link{
+        color: white;
+        background-color: unset;
+   }
+    #links > a:visited{
+        color: white;
+        background-color: unset;
+   }
+    #links > a:hover, a:active, a:focus{
+        text-decoration: underline;
+        background-color: unset;
+   }
+    #links > a > img{
+        filter: brightness(0) invert(1);
+   }
+    .navigation > a:last-child{
+        margin-right: 2rem;
+   }
+    .login{
+        display: grid;
+        grid-template-columns: 2.5fr 2fr;
+        grid-column: 5;
+        grid-row: 1;
+        grid-template-rows: 1fr;
+        align-items: start;
+   }
+    #login-btn:link{
+        margin-top: 12%;
+        color: white;
+        grid-column-start: 2;
+        grid-column-end: 2;
+   }
+    #login-btn:visited{
+        color: white;
+   }
+    #sign-up-btn{
+        grid-column-start: 3;
+        grid-column-end: 3;
+   }
+    #sign-up-btn:link{
+        color: hsl(356, 100%, 66%);
+        background: unset;
+        background-color: white;
+   }
+    #sign-up-btn:visited{
+        color: hsl(356, 100%, 66%);
+        background-color: white;
+   }
+    #sign-up-btn:hover,:focus{
+        color: white;
+        background-color: hsl(355, 100%, 74%);
+   }
+    #connect_menu{
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        width: 18%;
+        background-color: white;
+        border-radius: 0.3rem;
+        margin-bottom: 1rem;
+        position: absolute;
+        top: 110%;
+        left: 22%;
+        padding: 0.625rem 0.938rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 0.313rem 0.938rem;
+        font-weight: 390;
+   }
+    #connect_menu > a:hover,:focus{
+        font-weight: bold;
+   }
+    .main-section{
+        margin-bottom: 19.5rem;
+        margin-top: 9rem;
+        padding-top: 0;
+   }
+    .main-section h2{
+        margin-bottom: -9rem;
+   }
+    .illustration-mobile{
+        position: relative;
+        display: grid;
+        grid-template-columns: 57.438rem 1.5fr;
+        /*grid-template-rows: 1.2fr;*/
+   }
+    .editor{
+        grid-column: 1/1;
+        grid-row: 1/1;
+        text-align: left;
+        width: 60%;
+        margin-top: 15rem;
+        margin-left: -11rem;
+   }
+    .editor > p:first-child{
+        margin-bottom: 61px;
+   }
+   .editor > p:nth-child(2){
+       margin-bottom: 50px;
+   }
+    .mobile_editor-boxshadow > img{
+        grid-column: 2/2;
+        grid-row: 1/1;
+   }
+    .stateOfArt{
+        padding: 0;
+        background-size: 59%;
+        background-position: -30% 83%;
+        background-attachment: scroll;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 22rem;
+        place-items: center;
+        place-content: center;
+   }
+    .stateOfArt > div{
+        text-align: left;
+        width: 80%;
+        grid-column: 2/2;
+        grid-row: 1/1;
+        justify-self: left;
+
+   }
+    .stateOfArt::after{
+        top: -9.063rem;
+        left: 24%;
+        width: 42%;
+        height: 38rem;
+   }
+    .free{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 31.25rem;
+        place-items: center;
+        place-content: left center;
+        margin-top: 13.5rem;
+        padding: 0;
+        margin-bottom: 13.5rem;
+        width: 100%;
+   }
+    .free img{
+        position: absolute;
+        left: -13.563rem;
+        top: -15%;
+        grid-column: 1/1;
+        grid-row: 1/1;
+        max-height: 126%;
+   }
+    .free div{
+        text-align: left;
+        width: 86%;
+   }
+    .free div:last-child{
+        width: 45%;
+   }
+    .blogr{
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translate(-13%,-50%);
+   }
+    .blogr p{
+        margin-bottom: 3.75rem;
+   }
+    .blogr > p:last-child{
+        margin-bottom: 3rem;
+   }
+    #editor-mobile_desktop{
+        position: absolute;
+        top: 0;
+        right: -15.313rem;
+   }
+    #laptop{
+        max-width: unset;
+   }
+    footer{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        grid-template-rows: 21.875rem;
+   }
+    footer h1{
+        align-self: start;
+        margin-top: 2rem;
+   }
+    .footer_navigation{
+        grid-column: 2/4;
+        display: grid;
+        grid-template: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+   }
+    .footer_navigation div{
+        text-align: left;
+   }
+    .footer_navigation div>a{
+        margin-bottom: 0.625rem;
+   }
+    .footer_navigation strong:last-child{
+        margin-bottom: 2.7rem;
+   }
+    #strong-margin{
+        margin-bottom: 2.438rem;
+   }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1358px){
+    .mobile_editor-boxshadow > img{
+        max-height: 124%;
+   }
+    .stateOfArt > div{
+        margin-right: 8vw;
+   }
+    #editor-mobile_desktop{
+        top: 2.25rem;
+   }
+    .editor{
+        width: 45vw;
+        margin-left: -21rem;
+        padding-left: 5.2rem;
+   }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1108px){
+    .editor{
+        width: 40vw;
+        margin-left: -34rem;
+   }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1600px){
+    .mobile_editor-boxshadow > img{
+        right: -11.313rem;
+   }
+}
+
+@media only screen and (min-width: 1600px){
+    #links{
+        grid-template-columns: 1fr 1fr 1fr 39vw 3fr;
+        grid-template-rows: 1fr;
+   }
+    .login{
+        gap: .5rem;
+   }
+    .free img{
+        left: unset;
+        position: static;
+   }
+    #editor-mobile_desktop{
+        position: static;
+   }
+    .editor{
+        margin-top: -1rem;
+        margin-left: 11rem;
+   }
+    .blogr{
+        position: static;
+        transform: unset;
+   }
+    .free div:last-child{
+        width: 62%;
+   }
+}
+
+@media only screen and (min-width: 2000px){
+    .editor{
+        margin-left: 31vw;
+   }
+    .stateOfArt div:first-child{
+        width: 47vw;
+   }
+}
+
+
+/*Hamburger menu bug fix (white background)*/
+.icon:link{
+    background-color: unset;
+}
+.icon:visited{
+    background-color: unset;
+
+}
+
+.icon:hover,:focus{
+    background-color: unset;
+}
+
+.icon:active{
+    background-color: unset;
+}
