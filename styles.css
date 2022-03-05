@@ -243,6 +243,10 @@ hr{
     grid-template-columns: 1.5fr 1.5fr;
     place-content: center;
     place-items: center;
+ overflow-x: hidden;
+}
+#editor-mobile_desktop{
+ overflow-x: hidden;
 }
 .mobile_editor-boxshadow::before{
     position: absolute;
