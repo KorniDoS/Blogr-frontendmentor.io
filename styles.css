@@ -128,12 +128,12 @@ body{
 }
 .navigation > a:link{
     padding: 0.4rem;
-    color: hsl(13, 100%, 72%) !important;
+    color: white !important;
     margin: 0.4rem;
     text-decoration: none;
 }
 .navigation > a:visited{
-    color: hsl(13, 100%, 72%);
+    color: white;
 }
 .navigation > a:hover, .navigation > a:focus{
     color:hsl(353, 100%, 62%) 
